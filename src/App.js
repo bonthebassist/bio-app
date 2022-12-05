@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import AboutMe from './components/AboutMe';
+import Title from './components/Title';
+import HobbiesList from './components/HobbiesList';
 
 function App() {
+  const myHobbies = ["Painting (acrylic on canvas)", "Running", "Yoga", "Photography", "Brunch"]
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Title></Title>
       </header>
+      <section>
+        <AboutMe/>
+      </section>
+      <HobbiesList myHobbies={myHobbies}/>
     </div>
   );
 }
